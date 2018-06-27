@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/*.test.js"
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "author": "Jacques Iragena",
   "license": "ISC",
   "devDependencies": {
+    "expect": "^23.2.0",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "nodemon": "^1.17.5"
   }
 }
