@@ -13,6 +13,23 @@ it('should add two numbers', function(){
   expect(result).toBe(44);
 });
 
+it('should async add two numbers',()=>{
+  utils.asyncAdd(4,3,(sum)=>{
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
+});
+
+
+it('sould asyncSquare squares a number',()=>{
+  utils.asyncSquare(5,(result)=>{
+    expect(result).toBe(25).toBeA('number');
+    done();
+  });
+
+
+});
+
 // it('should expect some values',function(){
 //   // expect(44);
 //   expect({
@@ -26,12 +43,12 @@ it('should add two numbers', function(){
 
 //it should verify first and last names are set
 //assert it icnludes firstName and lastName with proper values
-it('should set  firstName and lastName', ()=>{
-  var user = {location:'Little Rock', age:25};
-  var result = utils.setName(user,'Jacques Iragena');
-
-  expect(result).toInclude({
-    firstName: 'Jacques',
-    lastName: 'Iragena'
-  });
-});
+// it('should set  firstName and lastName', ()=>{
+//   var user = {location:'Little Rock', age:25};
+//   var result = utils.setName(user,'Jacques Iragena');
+//
+//   expect(result).toInclude({
+//     firstName: 'Jacques',
+//     lastName: 'Iragena'
+//   });
+// });
