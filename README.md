@@ -1,1 +1,1 @@
-# mocha-and-basic-testing
+# Testing applications
